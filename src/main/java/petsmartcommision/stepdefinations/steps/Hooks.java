@@ -2,6 +2,7 @@ package petsmartcommision.stepdefinations.steps;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import petsmartcommision.PageObjects.BaseComponent;
@@ -19,7 +20,8 @@ public class Hooks {
 
     @Before
     public void startup(){
-        if(applicationContext.getBean(BaseComponent.class).driver==null){
+        RemoteWebDriver rd=((RemoteWebDriver)applicationContext.getBean(BaseComponent.class).driver);
+        if(rd.getSessionId()==null){
             applicationContext.getBean(BaseComponent.class).driver= DriverProvider.getDriverinsTance("local");
         }
     }
@@ -30,6 +32,6 @@ public class Hooks {
         destroyDriverInstance();
     }
     public void destroyDriverInstance(){
-        applicationContext.getBean(BaseComponent.class).driver=null;
+        applicationContext.getBean(BaseComponent.class).driver.quit();
     }
 }

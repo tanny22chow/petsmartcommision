@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import petsmartcommision.drivers.DriverProvider;
 
 import javax.annotation.PostConstruct;
-
+import javax.annotation.PreDestroy;
 
 @Component
 public class BaseComponent  {
@@ -19,6 +19,11 @@ public class BaseComponent  {
            driver= DriverProvider.getDriverinsTance("local");
         }
     }
+
+//    @PreDestroy
+//    public void tearDown(){
+//        driver.quit();
+//    }
 
 
 }

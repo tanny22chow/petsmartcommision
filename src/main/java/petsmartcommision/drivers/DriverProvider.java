@@ -16,7 +16,6 @@ public class DriverProvider {
 
     public static WebDriver getDriverinsTance(String driverType){
         try{
-            if(driver==null){
                 if(driverType=="local"){
                     driver=new ChromeDriver();
                     return driver;
@@ -25,7 +24,6 @@ public class DriverProvider {
                     driver=driverProviderWithCapibility();
                     return driver;
                 }
-            }
         }catch (Exception e){
 
         }
