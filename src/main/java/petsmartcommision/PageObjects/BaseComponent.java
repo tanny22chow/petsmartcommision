@@ -1,29 +1,23 @@
 package petsmartcommision.PageObjects;
 
 import org.openqa.selenium.WebDriver;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.stereotype.Component;
 import petsmartcommision.drivers.DriverProvider;
 
 import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 @Component
 public class BaseComponent  {
 
-    public WebDriver driver;
+    public RemoteWebDriver driver;
 
     @PostConstruct
     public void init(){
         if(driver==null){
-           driver= DriverProvider.getDriverinsTance("local");
+           driver= DriverProvider.getDriverinsTance("bschrome");
         }
     }
-
-//    @PreDestroy
-//    public void tearDown(){
-//        driver.quit();
-//    }
 
 
 }

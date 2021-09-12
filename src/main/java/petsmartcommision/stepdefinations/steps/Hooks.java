@@ -20,9 +20,9 @@ public class Hooks {
 
     @Before
     public void startup(){
-        RemoteWebDriver rd=((RemoteWebDriver)applicationContext.getBean(BaseComponent.class).driver);
+        RemoteWebDriver rd=applicationContext.getBean(BaseComponent.class).driver;
         if(rd.getSessionId()==null){
-            applicationContext.getBean(BaseComponent.class).driver= DriverProvider.getDriverinsTance("local");
+            applicationContext.getBean(BaseComponent.class).driver= DriverProvider.getDriverinsTance("bschrome");
         }
     }
 
