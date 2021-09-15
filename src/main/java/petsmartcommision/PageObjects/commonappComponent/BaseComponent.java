@@ -14,7 +14,7 @@ public class BaseComponent  {
     @PostConstruct
     public void init(){
         if(driver==null){
-           driver= DriverProvider.getDriverinsTance("local");
+           driver= DriverProvider.getDriverinsTance("bschrome");
         }
     }
 
