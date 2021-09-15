@@ -3,6 +3,7 @@ package petsmartcommision.PageObjects;
 import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import petsmartcommision.PageObjects.commonappComponent.BaseComponent;
 
 @Component
 public class CommissionHomeComponent {

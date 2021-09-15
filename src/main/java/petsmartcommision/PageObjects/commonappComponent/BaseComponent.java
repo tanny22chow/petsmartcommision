@@ -1,6 +1,5 @@
-package petsmartcommision.PageObjects;
+package petsmartcommision.PageObjects.commonappComponent;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.stereotype.Component;
 import petsmartcommision.drivers.DriverProvider;
@@ -15,7 +14,7 @@ public class BaseComponent  {
     @PostConstruct
     public void init(){
         if(driver==null){
-           driver= DriverProvider.getDriverinsTance("bschrome");
+           driver= DriverProvider.getDriverinsTance("local");
         }
     }
 

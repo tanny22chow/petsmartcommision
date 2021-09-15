@@ -1,10 +1,10 @@
 package petsmartcommision.PageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import petsmartcommision.PageObjects.commonappComponent.BaseComponent;
 
 @Component
 public class LandingComponent {
@@ -40,6 +40,5 @@ public class LandingComponent {
     public void navigateToCommisionLandingpage(){
         openUrl();
         login();
-
     }
 }
