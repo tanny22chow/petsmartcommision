@@ -6,6 +6,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import petsmartcommision.PageObjects.commonappComponent.BaseComponent;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Component
 public class LandingComponent {
 
@@ -38,7 +44,21 @@ public class LandingComponent {
         baseComponent.driver.findElement(commission).click();
     }
     public void navigateToCommisionLandingpage(){
-        openUrl();
-        login();
+//        openUrl();
+//        login();
+        logmessege();
+    }
+    public void logmessege(){
+        try{
+            FileWriter fw = new FileWriter("demo.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+            pw.println(timeStamp);
+            pw.flush();
+            pw.close();
+        }catch(Exception e){
+
+        }
     }
 }

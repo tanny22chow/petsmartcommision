@@ -28,7 +28,7 @@ public class Hooks {
     public void startup(){
         RemoteWebDriver rd=applicationContext.getBean(BaseComponent.class).driver;
         if(rd.getSessionId()==null){
-            applicationContext.getBean(BaseComponent.class).driver= DriverProvider.getDriverinsTance("bschrome");
+            applicationContext.getBean(BaseComponent.class).driver= DriverProvider.getDriverinsTance("local");
         }
     }
 

@@ -18,3 +18,7 @@ Feature: Search for content
     And select row with
     |Salon_03|
     And verify hourly avg value
+
+  @smoke
+  Scenario: Commision3
+    Given I am on commision landing page

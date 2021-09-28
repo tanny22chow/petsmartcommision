@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"classpath:features/"},
         glue = {"petsmartcommision.stepdefinations.steps"},
+        tags = "@smoke",
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 public class Testrunner {

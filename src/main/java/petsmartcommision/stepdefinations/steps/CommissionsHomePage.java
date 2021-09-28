@@ -17,7 +17,7 @@ public class CommissionsHomePage {
     public void navigateToCalculations(){
         commissionHomeComponent.navigateToCalculations();
         commissionHomeComponent.navigateToTransactions();
-        System.out.println("i am on calculations page");
+        System.out.println("i am on transaction page");
 
     }
     @Then("^navigate to Titles page$")
