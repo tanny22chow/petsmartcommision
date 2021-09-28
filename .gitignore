@@ -10,6 +10,5 @@ doc/
 *.zip
 *-results.xml
 *.log
-*.txt
 results/
 /bin/
